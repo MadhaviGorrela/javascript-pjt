@@ -1,0 +1,17 @@
+.heads{
+    display: none;
+}
+.head-active{
+    display: block;
+}
+.img{
+    display: none;
+}
+.img-active{
+    display: block;
+}
+.icon{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
