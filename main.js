@@ -1,5 +1,8 @@
 //operators//
 //arithmetic //
+ 
+ document.querySelector(".opt1").innerHTML = "Arithmetic operator";
+
  let ac= 4;
  let bc = 5;
  console.log(ac + bc);
@@ -28,6 +31,7 @@
  console.log(ca);
  document.querySelector(".art5").innerHTML=ca;
  //assignment//
+  document.querySelector(".opt2").innerHTML = "Assignment operator";
  let pq = 6;
  pq += 4;
  console.log(pq);
@@ -49,6 +53,7 @@
  document.querySelector(".agn3").innerHTML=pt;
 // datatypes//
 // number//
+document.querySelector(".dt").innerHTML = "Data Types";
   const p = 20;
   const q = 30;
   console.log(p + q);
@@ -116,6 +121,7 @@
   console.log(s>t);
   document.querySelector(".bool2").innerHTML=s>t;
    // functions//
+   document.querySelector(".func").innerHTML = "Functions";
    function myfunction(){
     const u = 11;
     console.log(u);
@@ -149,4 +155,99 @@
     return imgs.classList.toggle("img-active");
   };
   function1();
+
+  //Escape character//
+  document.querySelector(".esc").innerHTML = "Escape character";
+  console.log("Are you a student");
+  document.querySelector(".esc1").innerHTML = "Are you a student";
+  console.log("Are you a \"student\"");
+  document.querySelector(".esc2").innerHTML = "Are you a \"student\"";
+  console.log(`Are "you" a student`);
+  document.querySelector(".esc3").innerHTML = `Are "you" a student`;
+  //ARRAYS//
+  document.querySelector(".arr").innerHTML = "Array methods";
+
+  const array = ["web", "digital", "mobile", "developer", "app", "ios"];
+  console.log(array.length);
+  document.querySelector(".arr1").innerHTML = array.length;
+
+  const array1 = array[array.length-3];
+  console.log(array1);
+  document.querySelector(".arr2").innerHTML = array1;
+
+  const array2 = array.length-3;
+  console.log(array2);
+  document.querySelector(".arr3").innerHTML = array2;
+
+   array[5] = "graphics";
+   console.log(array);
+   document.querySelector(".arr4").innerHTML = array;
+
+   const abcd = array.push("marketing");
+   console.log(array);
+   document.querySelector(".arr5").innerHTML = array;
+
+   const text = array.pop("");
+   console.log(array);
+   document.querySelector(".arr6").innerHTML = array;
+   
+   const sai = array.shift("");
+   console.log(array);
+   document.querySelector(".arr7").innerHTML = array;
+
+   const anu = array.unshift("gaming");
+   console.log(array);
+   document.querySelector(".arr8").innerHTML = array;
+
+   const arrays = ["432", "765", "987", "654", "321"];
+   console.log(Math.max.apply(null, arrays));
+   document.querySelector(".max").innerHTML = Math.max.apply(null, arrays);
+   
+   console.log(Math.min.apply(null, arrays));
+   document.querySelector(".min").innerHTML = Math.min.apply(null, arrays);
+
+   const arrays1 = ["web", "digital", "mobile", "developer", "app", "ios"];
+   const  madhu = arrays1.slice(3,6);
+   console.log(madhu);
+   document.querySelector(".sli").innerHTML = madhu;
+   const suma = arrays1.slice(4);
+   console.log(suma);
+   document.querySelector(".sli1").innerHTML = suma;
+
+   //map functoin//
+   document.querySelector(".map").innerHTML = "Map Function";
+   const objArray = [{id:1, name:"sai", age:15},
+                      {id:2, name:"madhu", age:14},
+                       {id:3, name:"devi", age:16},
+                        {id:4, name:"suma", age:17}];
+   const map = objArray.map(function mapfunction(item){
+    return item.age*2;
+    });
+   console.log(map);
+   document.querySelector(".map1").innerHTML = map;
+   const map1 = objArray.map(function mapFunction(item){
+    return item.id + " " + item.name + " " + item.age;
+   });
+   console.log(map1);
+   document.querySelector(".map2").innerHTML = map1;
+   const map2 = objArray.filter(function Mapfunction(item){
+    return item.age>15;
+   });
+   console.log(map2);
+   document.querySelector(".map3").innerHTML = map2;
+
+   objArray.forEach(function MapFunction(item){
+    console.log(item.age);
+   });
+
+   const findData = objArray.find(function mapfunction1(item){
+    return item.age<20;
+   });
+   console.log(findData);
+
+   const reduceData = objArray.reduce(function mapfunction2(name, item){
+    return item.age+name;
+   }, 0);
+   console.log(reduceData);
+
 
